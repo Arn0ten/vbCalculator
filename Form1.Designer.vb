@@ -42,16 +42,23 @@ Partial Class frmCalculator
         btn2 = New Button()
         btn1 = New Button()
         btnEqual = New Button()
-        btnComma = New Button()
+        btnPoint = New Button()
+        lblFNum = New Label()
+        lblSign = New Label()
         SuspendLayout()
         ' 
         ' txtResult
         ' 
-        txtResult.Location = New Point(33, 60)
+        txtResult.BackColor = SystemColors.ActiveCaptionText
+        txtResult.BorderStyle = BorderStyle.None
+        txtResult.Font = New Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtResult.ForeColor = SystemColors.Info
+        txtResult.Location = New Point(32, 55)
         txtResult.Multiline = True
         txtResult.Name = "txtResult"
-        txtResult.Size = New Size(318, 87)
+        txtResult.Size = New Size(318, 92)
         txtResult.TabIndex = 0
+        txtResult.TextAlign = HorizontalAlignment.Right
         ' 
         ' Button1
         ' 
@@ -60,9 +67,9 @@ Partial Class frmCalculator
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         Button1.ForeColor = SystemColors.ButtonHighlight
-        Button1.Location = New Point(33, 445)
+        Button1.Location = New Point(32, 457)
         Button1.Name = "Button1"
-        Button1.Size = New Size(154, 62)
+        Button1.Size = New Size(156, 62)
         Button1.TabIndex = 20
         Button1.Text = "0"
         Button1.UseVisualStyleBackColor = False
@@ -73,7 +80,7 @@ Partial Class frmCalculator
         btnAc.FlatAppearance.BorderSize = 0
         btnAc.FlatStyle = FlatStyle.Flat
         btnAc.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
-        btnAc.Location = New Point(32, 173)
+        btnAc.Location = New Point(32, 185)
         btnAc.Name = "btnAc"
         btnAc.Size = New Size(75, 62)
         btnAc.TabIndex = 21
@@ -86,7 +93,7 @@ Partial Class frmCalculator
         btnPlusMinus.FlatAppearance.BorderSize = 0
         btnPlusMinus.FlatStyle = FlatStyle.Flat
         btnPlusMinus.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
-        btnPlusMinus.Location = New Point(113, 173)
+        btnPlusMinus.Location = New Point(113, 185)
         btnPlusMinus.Name = "btnPlusMinus"
         btnPlusMinus.Size = New Size(75, 62)
         btnPlusMinus.TabIndex = 22
@@ -99,7 +106,7 @@ Partial Class frmCalculator
         btnPercent.FlatAppearance.BorderSize = 0
         btnPercent.FlatStyle = FlatStyle.Flat
         btnPercent.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
-        btnPercent.Location = New Point(194, 173)
+        btnPercent.Location = New Point(194, 185)
         btnPercent.Name = "btnPercent"
         btnPercent.Size = New Size(75, 62)
         btnPercent.TabIndex = 23
@@ -114,7 +121,7 @@ Partial Class frmCalculator
         btnDivide.FlatStyle = FlatStyle.Flat
         btnDivide.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btnDivide.ForeColor = SystemColors.ButtonHighlight
-        btnDivide.Location = New Point(275, 173)
+        btnDivide.Location = New Point(275, 185)
         btnDivide.Name = "btnDivide"
         btnDivide.Size = New Size(75, 62)
         btnDivide.TabIndex = 24
@@ -129,7 +136,7 @@ Partial Class frmCalculator
         btnMultiply.FlatStyle = FlatStyle.Flat
         btnMultiply.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btnMultiply.ForeColor = SystemColors.ButtonHighlight
-        btnMultiply.Location = New Point(275, 241)
+        btnMultiply.Location = New Point(275, 253)
         btnMultiply.Name = "btnMultiply"
         btnMultiply.Size = New Size(75, 62)
         btnMultiply.TabIndex = 28
@@ -143,7 +150,7 @@ Partial Class frmCalculator
         btn9.FlatStyle = FlatStyle.Flat
         btn9.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn9.ForeColor = SystemColors.ButtonHighlight
-        btn9.Location = New Point(194, 241)
+        btn9.Location = New Point(194, 253)
         btn9.Name = "btn9"
         btn9.Size = New Size(75, 62)
         btn9.TabIndex = 27
@@ -157,7 +164,7 @@ Partial Class frmCalculator
         btn8.FlatStyle = FlatStyle.Flat
         btn8.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn8.ForeColor = SystemColors.ButtonHighlight
-        btn8.Location = New Point(113, 241)
+        btn8.Location = New Point(113, 253)
         btn8.Name = "btn8"
         btn8.Size = New Size(75, 62)
         btn8.TabIndex = 26
@@ -171,7 +178,7 @@ Partial Class frmCalculator
         btn7.FlatStyle = FlatStyle.Flat
         btn7.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn7.ForeColor = SystemColors.ButtonHighlight
-        btn7.Location = New Point(32, 241)
+        btn7.Location = New Point(32, 253)
         btn7.Name = "btn7"
         btn7.Size = New Size(75, 62)
         btn7.TabIndex = 25
@@ -186,7 +193,7 @@ Partial Class frmCalculator
         btnSubtract.FlatStyle = FlatStyle.Flat
         btnSubtract.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btnSubtract.ForeColor = SystemColors.ButtonHighlight
-        btnSubtract.Location = New Point(276, 309)
+        btnSubtract.Location = New Point(275, 321)
         btnSubtract.Name = "btnSubtract"
         btnSubtract.Size = New Size(75, 62)
         btnSubtract.TabIndex = 32
@@ -200,7 +207,7 @@ Partial Class frmCalculator
         btn6.FlatStyle = FlatStyle.Flat
         btn6.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn6.ForeColor = SystemColors.ButtonHighlight
-        btn6.Location = New Point(195, 309)
+        btn6.Location = New Point(194, 321)
         btn6.Name = "btn6"
         btn6.Size = New Size(75, 62)
         btn6.TabIndex = 31
@@ -214,7 +221,7 @@ Partial Class frmCalculator
         btn5.FlatStyle = FlatStyle.Flat
         btn5.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn5.ForeColor = SystemColors.ButtonHighlight
-        btn5.Location = New Point(114, 309)
+        btn5.Location = New Point(113, 321)
         btn5.Name = "btn5"
         btn5.Size = New Size(75, 62)
         btn5.TabIndex = 30
@@ -228,7 +235,7 @@ Partial Class frmCalculator
         btn4.FlatStyle = FlatStyle.Flat
         btn4.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn4.ForeColor = SystemColors.ButtonHighlight
-        btn4.Location = New Point(33, 309)
+        btn4.Location = New Point(32, 321)
         btn4.Name = "btn4"
         btn4.Size = New Size(75, 62)
         btn4.TabIndex = 29
@@ -243,7 +250,7 @@ Partial Class frmCalculator
         btnAdd.FlatStyle = FlatStyle.Flat
         btnAdd.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btnAdd.ForeColor = SystemColors.ButtonHighlight
-        btnAdd.Location = New Point(275, 377)
+        btnAdd.Location = New Point(275, 389)
         btnAdd.Name = "btnAdd"
         btnAdd.Size = New Size(75, 62)
         btnAdd.TabIndex = 36
@@ -257,7 +264,7 @@ Partial Class frmCalculator
         btn3.FlatStyle = FlatStyle.Flat
         btn3.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn3.ForeColor = SystemColors.ButtonHighlight
-        btn3.Location = New Point(194, 377)
+        btn3.Location = New Point(194, 389)
         btn3.Name = "btn3"
         btn3.Size = New Size(75, 62)
         btn3.TabIndex = 35
@@ -271,7 +278,7 @@ Partial Class frmCalculator
         btn2.FlatStyle = FlatStyle.Flat
         btn2.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn2.ForeColor = SystemColors.ButtonHighlight
-        btn2.Location = New Point(113, 377)
+        btn2.Location = New Point(113, 389)
         btn2.Name = "btn2"
         btn2.Size = New Size(75, 62)
         btn2.TabIndex = 34
@@ -285,7 +292,7 @@ Partial Class frmCalculator
         btn1.FlatStyle = FlatStyle.Flat
         btn1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btn1.ForeColor = SystemColors.ButtonHighlight
-        btn1.Location = New Point(32, 377)
+        btn1.Location = New Point(32, 389)
         btn1.Name = "btn1"
         btn1.Size = New Size(75, 62)
         btn1.TabIndex = 33
@@ -300,26 +307,49 @@ Partial Class frmCalculator
         btnEqual.FlatStyle = FlatStyle.Flat
         btnEqual.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
         btnEqual.ForeColor = SystemColors.ButtonHighlight
-        btnEqual.Location = New Point(276, 445)
+        btnEqual.Location = New Point(275, 457)
         btnEqual.Name = "btnEqual"
         btnEqual.Size = New Size(75, 62)
         btnEqual.TabIndex = 38
         btnEqual.Text = "="
         btnEqual.UseVisualStyleBackColor = False
         ' 
-        ' btnComma
+        ' btnPoint
         ' 
-        btnComma.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        btnComma.FlatAppearance.BorderSize = 0
-        btnComma.FlatStyle = FlatStyle.Flat
-        btnComma.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
-        btnComma.ForeColor = SystemColors.ButtonHighlight
-        btnComma.Location = New Point(195, 445)
-        btnComma.Name = "btnComma"
-        btnComma.Size = New Size(75, 62)
-        btnComma.TabIndex = 37
-        btnComma.Text = ","
-        btnComma.UseVisualStyleBackColor = False
+        btnPoint.BackColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        btnPoint.FlatAppearance.BorderSize = 0
+        btnPoint.FlatStyle = FlatStyle.Flat
+        btnPoint.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
+        btnPoint.ForeColor = SystemColors.ButtonHighlight
+        btnPoint.Location = New Point(194, 457)
+        btnPoint.Name = "btnPoint"
+        btnPoint.Size = New Size(75, 62)
+        btnPoint.TabIndex = 37
+        btnPoint.Text = "."
+        btnPoint.UseVisualStyleBackColor = False
+        ' 
+        ' lblFNum
+        ' 
+        lblFNum.AutoSize = True
+        lblFNum.BackColor = SystemColors.ActiveCaptionText
+        lblFNum.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold)
+        lblFNum.ForeColor = SystemColors.ButtonHighlight
+        lblFNum.Location = New Point(279, 157)
+        lblFNum.Name = "lblFNum"
+        lblFNum.Size = New Size(0, 20)
+        lblFNum.TabIndex = 39
+        lblFNum.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' lblSign
+        ' 
+        lblSign.AutoSize = True
+        lblSign.BackColor = SystemColors.ActiveCaptionText
+        lblSign.Font = New Font("Segoe UI Semibold", 11.25F, FontStyle.Bold)
+        lblSign.ForeColor = SystemColors.ButtonHighlight
+        lblSign.Location = New Point(356, 89)
+        lblSign.Name = "lblSign"
+        lblSign.Size = New Size(0, 20)
+        lblSign.TabIndex = 40
         ' 
         ' frmCalculator
         ' 
@@ -327,8 +357,10 @@ Partial Class frmCalculator
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(380, 557)
+        Controls.Add(lblSign)
+        Controls.Add(lblFNum)
         Controls.Add(btnEqual)
-        Controls.Add(btnComma)
+        Controls.Add(btnPoint)
         Controls.Add(btnAdd)
         Controls.Add(btn3)
         Controls.Add(btn2)
@@ -349,6 +381,7 @@ Partial Class frmCalculator
         Controls.Add(txtResult)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "frmCalculator"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Calculator"
         ResumeLayout(False)
         PerformLayout()
@@ -373,6 +406,8 @@ Partial Class frmCalculator
     Friend WithEvents btn2 As Button
     Friend WithEvents btn1 As Button
     Friend WithEvents btnEqual As Button
-    Friend WithEvents btnComma As Button
+    Friend WithEvents btnPoint As Button
+    Friend WithEvents lblFNum As Label
+    Friend WithEvents lblSign As Label
 
 End Class
