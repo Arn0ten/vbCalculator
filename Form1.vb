@@ -72,6 +72,17 @@
         lblSign.Text = "%"
         txtResult.Text = ""
     End Sub
+    Private Sub btnSquareRoot_Click(sender As Object, e As EventArgs) Handles btnSquareRoot.Click
+        lblFNum.Text = txtResult.Text
+        lblSign.Text = "√"
+        txtResult.Text = ""
+
+        If lblSign.Text = "√" Then
+            txtResult.Text = Val(Math.Sqrt(lblFNum.Text))
+            lblFNum.Text = ""
+            lblSign.Text = ""
+        End If
+    End Sub
     Private Sub btnAc_Click(sender As Object, e As EventArgs) Handles btnAc.Click
         lblFNum.Text = ""
         lblSign.Text = ""
@@ -108,7 +119,7 @@
             lblFNum.Text = ""
             lblSign.Text = ""
         End If
-    End Sub
 
+    End Sub
 
 End Class

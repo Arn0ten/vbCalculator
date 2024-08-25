@@ -26,7 +26,7 @@ Partial Class frmCalculator
         txtResult = New TextBox()
         Button1 = New Button()
         btnAc = New Button()
-        btnPlusMinus = New Button()
+        btnSquareRoot = New Button()
         btnPercent = New Button()
         btnDivide = New Button()
         btnMultiply = New Button()
@@ -87,18 +87,18 @@ Partial Class frmCalculator
         btnAc.Text = "AC"
         btnAc.UseVisualStyleBackColor = False
         ' 
-        ' btnPlusMinus
+        ' btnSquareRoot
         ' 
-        btnPlusMinus.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        btnPlusMinus.FlatAppearance.BorderSize = 0
-        btnPlusMinus.FlatStyle = FlatStyle.Flat
-        btnPlusMinus.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
-        btnPlusMinus.Location = New Point(113, 185)
-        btnPlusMinus.Name = "btnPlusMinus"
-        btnPlusMinus.Size = New Size(75, 62)
-        btnPlusMinus.TabIndex = 22
-        btnPlusMinus.Text = "+/-"
-        btnPlusMinus.UseVisualStyleBackColor = False
+        btnSquareRoot.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        btnSquareRoot.FlatAppearance.BorderSize = 0
+        btnSquareRoot.FlatStyle = FlatStyle.Flat
+        btnSquareRoot.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold)
+        btnSquareRoot.Location = New Point(113, 185)
+        btnSquareRoot.Name = "btnSquareRoot"
+        btnSquareRoot.Size = New Size(75, 62)
+        btnSquareRoot.TabIndex = 22
+        btnSquareRoot.Text = "√"
+        btnSquareRoot.UseVisualStyleBackColor = False
         ' 
         ' btnPercent
         ' 
@@ -375,7 +375,7 @@ Partial Class frmCalculator
         Controls.Add(btn7)
         Controls.Add(btnDivide)
         Controls.Add(btnPercent)
-        Controls.Add(btnPlusMinus)
+        Controls.Add(btnSquareRoot)
         Controls.Add(btnAc)
         Controls.Add(Button1)
         Controls.Add(txtResult)
@@ -390,7 +390,7 @@ Partial Class frmCalculator
     Friend WithEvents txtResult As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents btnAc As Button
-    Friend WithEvents btnPlusMinus As Button
+    Friend WithEvents btnSquareRoot As Button
     Friend WithEvents btnPercent As Button
     Friend WithEvents btnDivide As Button
     Friend WithEvents btnMultiply As Button
